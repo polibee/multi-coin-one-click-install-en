@@ -16,13 +16,14 @@ sudo cmake ..
 sudo make
 
 echo "Starting xmrig..."
-echo "Use the following command to run xmrig in the background:"
-echo "screen -S xmrig -dm ~/xmrig-6.22.2/build/xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u DOGE:DKEfmGknGtdY9gEs4YJS9fTSmAtH7eAUdn.unmineable_worker_tiahnyqc#dsti-8isi --log-file xmrig.log"
-echo "To list all screen sessions, run:"
-echo "screen -ls"
-echo "To find the xmrig screen session ID, run:"
-echo "screen -ls | grep xmrig"
-echo "To view the xmrig log, run the following (replace 12345.xmrig with your actual session ID):"
-echo "screen -r 12345.xmrig"
-echo "To uninstall xmrig, run the following command:"
-echo "sudo rm -rf ~/xmrig-6.22.2"
+screen -S xmrig -dm ~/xmrig-6.22.2/build/xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u DOGE:DKEfmGknGtdY9gEs4YJS9fTSmAtH7eAUdn.unmineable_worker_vvefcfdy#dsti-8isi -p x --log-file xmrig.log
+
+echo "xmrig is now running in the background using screen."
+
+echo ""
+echo "Helpful commands:"
+echo "To list all screen sessions:       screen -ls"
+echo "To reattach to xmrig session:      screen -r xmrig"
+echo "To detach from screen (keep running): Ctrl + A, then D"
+echo "To view xmrig log file:            tail -f ~/xmrig-6.22.2/build/xmrig.log"
+echo "To uninstall xmrig:                sudo rm -rf ~/xmrig-6.22.2"
