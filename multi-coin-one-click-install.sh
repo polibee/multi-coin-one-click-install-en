@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install -y build-essential cmake libuv1-dev libssl-dev libhwloc-dev wget
 
 echo "Downloading xmrig source code..."
-sudo wget -O v6.20.0.tar.gz https://github.com/xmrig/xmrig/archive/refs/tags/v6.20.0.tar.gz
+sudo wget -O v6.20.0.tar.gz https://github.com/xmrig/xmrig/archive/refs/tags/v6.22.2.tar.gz
 sudo tar -zxvf v6.20.0.tar.gz
 
 echo "Compiling xmrig..."
